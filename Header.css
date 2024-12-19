@@ -1,0 +1,83 @@
+body {
+    direction: rtl;
+    font-family: "Rubik", sans-serif;
+    background-color: #f9f9f9;
+       overflow-x: hidden; /* حذف اسکرول افقی */
+   
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header-banner-container {
+    max-width: 100%; /* عرض محدود به عرض صفحه */
+    overflow: hidden; /* جلوگیری از نمایش بخش‌های اضافی */
+}
+.header-banner-container img {
+    width: 100%; /* تصویر به عرض والد محدود می‌شود */
+    height: auto; /* نسبت تصویر حفظ می‌شود */
+    display: block; /* جلوگیری از فاصله‌های اضافی */
+}
+.header {
+    font-family: "Rubik", sans-serif;
+    background-color: #fff;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    height: 70px;
+}
+.logo img {
+    height: 30px;
+}
+.search-bar input {
+    border-radius: 25px;
+    height: 40px;
+}
+.icon-link {
+    font-family: "Rubik", sans-serif;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #666;
+    position: relative; /* برای خط زیر */
+    padding-bottom: 5px; /* فاصله خط از متن */
+    transition: color 0.3s ease;
+}
+.icon-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px; /* ضخامت خط */
+    background-color: #ef394e; /* رنگ قرمز */
+    transition: width 0.3s ease; /* انیمیشن برای خط */
+}
+.icon-link:hover {
+    color: #ef394e;
+}
+.icon-link:hover::after {
+    width: 100%; /* نمایش کامل خط */
+}
+.text-section {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.text-section .right-links a {
+    margin-left: 20px;
+}
+.location {
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    align-items: center;
+}
+.location i {
+    color: #666;
+}
+.location span {
+    margin-right: 5px;
+    font-size: 0.9rem;
+}

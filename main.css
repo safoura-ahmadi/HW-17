@@ -1,0 +1,528 @@
+/* کانتینر برای استوری */
+.story-container {
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 15px 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  scroll-behavior: smooth;
+}
+
+/* استایل برای هر استوری */
+.story-item {
+  text-decoration: none;
+  flex: 0 0 auto;
+  width: 80px;
+  margin: 0 10px;
+  text-align: center;
+  position: relative;
+}
+
+/* استایل تصویر استوری */
+.story-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #f1006f;
+  padding: 2px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* افکت هاور برای استوری */
+.story-item img:hover {
+  transform: scale(1.1);
+}
+
+/* متن زیر استوری */
+.story-item p {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #555;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 80px;
+}
+
+/* اسکرول بار سفارشی */
+.story-container::-webkit-scrollbar {
+  height: 5px;
+}
+
+.story-container::-webkit-scrollbar-thumb {
+  background-color: #f1006f;
+  border-radius: 10px;
+}
+
+.story-container::-webkit-scrollbar-track {
+  background: #e9ecef;
+}
+
+/* دکمه‌های پیمایش */
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  border: none;
+  color: #f1006f;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+}
+
+.scroll-left {
+  left: 10px;
+}
+
+.scroll-right {
+  right: 10px;
+}
+/*  */
+/* 4 pictures */
+/*  */
+
+.custom-container {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* تنظیم فاصله ستون‌ها */
+.custom-row {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.custom-col {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/*  */
+/* circle section and slide products */
+/*  */
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.icon-circle i {
+  font-size: 30px;
+  color: #e91e63;
+}
+
+.icon-text {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px;
+  color: #333;
+}
+
+/* استایل برای اسلایدر کارت‌ها */
+.carousel-container {
+  font-family: "Rubik", sans-serif;
+  background-color: #e91e63;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.product-card {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.product-card img {
+  width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.product-card h6 {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.product-card p {
+  font-size: 12px;
+  color: #777;
+}
+
+/* تنظیم دکمه‌های دایره‌ای */
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto; /* دکمه‌ها اندازه اتوماتیک می‌گیرند */
+  height: auto;
+  top: 44%;
+  transform: translateY(-3%);
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-button {
+  width: 40px; /* قطر دایره */
+  height: 40px;
+  background-color: #ffffff; /* رنگ پس‌زمینه سفید */
+  border-radius: 50%; /* کاملاً دایره */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* سایه ملایم */
+  opacity: 0.9;
+}
+
+.circle-button:hover {
+  background-color: #f8f9fa;
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: transparent; /* شفافیت پس‌زمینه فلش */
+  background-size: 100%; /* بزرگ‌تر کردن فلش */
+  filter: invert(1) brightness(0); /* سفید کردن فلش */
+  width: 10px;
+  height: 10px;
+}
+/*  */
+/* head abd 8 circles */
+/*  */
+.col-8-custom {
+  flex: 0 0 12.5%; /* هر ستون 12.5% عرض کل (1/8) */
+  max-width: 12.5%;
+}
+.category-item {
+  text-align: center; /* تراز متن و تصویر در وسط */
+  text-decoration: none; /* حذف زیرخط لینک */
+  color: #000; /* رنگ متن */
+}
+.category-item img {
+  width: 90px; /* عرض ثابت برای تصویر */
+  height: 90px; /* ارتفاع ثابت برای تصویر */
+  border-radius: 50%; /* دایره‌ای کردن تصاویر */
+  object-fit: cover; /* تناسب تصویر */
+  object-fit: contain;
+}
+/*  */
+/* بنر دو تایی */
+/*  */
+/* استایل کلی بنر */
+.custom-banner {
+  border-radius: 15px; /* گوشه‌های گرد */
+  overflow: hidden; /* جلوگیری از بیرون‌زدگی محتوا */
+  height: 250px; /* ارتفاع ثابت بنر */
+}
+
+.custom-banner img {
+  width: 100%; /* عرض کامل */
+  height: 100%; /* ارتفاع کامل */
+  object-fit: cover; /* برش صحیح تصویر */
+}
+
+/*  */
+/* برند */
+/*  */
+.brand-box {
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #fff;
+  position: relative;
+}
+
+/* استایل عنوان */
+.brand-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+}
+
+.brand-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+/* استایل برای کارت برند */
+/* استایل کلی باکس */
+.brand-box {
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 15px;
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 95%;
+  position: relative;
+}
+
+/* استایل عنوان */
+.brand-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+}
+
+.brand-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+}
+
+/* استایل برای کارت برند */
+.brand-box {
+  border: 1px solid #e0e0e0; /* رنگ لایت کمرنگ برای باکس بیرونی */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 15px;
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 95%;
+  position: relative;
+}
+
+/* استایل کارت‌های برند */
+/* باکس بیرونی */
+.brand-box {
+  border: 1px solid #ddd; /* بردر کمرنگ */
+  border-radius: 12px; /* گوشه‌های گرد */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* سایه ملایم */
+  margin-bottom: 20px; /* فاصله از پایین */
+  padding: 20px; /* پدینگ داخلی */
+}
+
+/* کارت‌ها */
+/* باکس بیرونی */
+.brand-box {
+  border: 1px solid #ddd; /* بردر کمرنگ */
+  border-radius: 12px; /* گوشه‌های گرد */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* سایه ملایم */
+  margin-bottom: 20px; /* فاصله از پایین */
+  padding: 20px; /* پدینگ داخلی */
+}
+
+/* کارت‌ها */
+/* کارت‌های برند */
+.brand-card {
+    flex: 0 0 220px; /* عرض کارت‌ها بزرگ‌تر شد */
+    height: 140px; /* ارتفاع کارت‌ها بزرگ‌تر شد */
+    border-left: 1px solid #e0e0e0; /* فقط بردر سمت چپ با رنگ کمرنگ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0; /* حذف فاصله بین کارت‌ها */
+    transition: transform 0.3s ease;
+}
+
+.brand-card a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.brand-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* نمایش کامل تصویر در کارت */
+}
+
+/*  */
+/* چارت بندی محصولات بر اساس سلیقه ی شما */
+/*  */
+ /* باکس بیرونی */
+      
+ .main-box {
+  font-family: "Rubik", sans-serif;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin: 20px 0;
+  padding: 16px;
+}
+
+/* باکس کوچک */
+.sub-box {
+  padding: 12px;
+  border-left: 1px solid #e0e0e0;
+}
+
+.sub-box:last-child {
+  border-left: none;
+}
+
+/* عنوان‌ها */
+.title {
+  font-weight: bold;
+  font-size: 1.1rem;
+
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #757575;
+
+  margin-bottom: 16px;
+}
+
+/* تصاویر با Flexbox */
+.image-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px;
+  justify-content: center;
+}
+
+.image-links a {
+  flex: 0 0 calc(50% - 12px);
+  /* دو ستون */
+  display: block;
+  overflow: hidden;
+
+
+}
+
+
+
+.image-links img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.view-link {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.view-link a {
+  text-decoration: none;
+  color: #19bfd3;
+  /* رنگ آبی بوت‌استرپ */
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+/*  */
+/* محصولات رده بندی شده */
+/*  */
+.main-container {
+  font-family: "Rubik", sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px auto;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.icon-fire {
+  color: #ff9800;
+  margin-left: 8px;
+}
+
+.link-view-all {
+  color: #00bfa5;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: auto; /* تغییر مکان به سمت چپ */
+}
+
+.pbox-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.pbox-number {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #00bfa5;
+  margin-left: 10px;
+}
+
+.pbox-text {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.pbox-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* فاصله بین ستون‌ها */
+.row > * {
+  margin-bottom: 20px;
+}
+/*  */
+/* تصویر لینکدار */
+/*  */
+.link-image-container {
+  height: 200px; /* ارتفاع بیشتر */
+  padding-bottom: 15px;
+}
+
+.link-image {
+  display: block;
+  width: 99%; /* عرض حدود 98 درصد */
+  margin: 0 auto; /* وسط چین کردن */
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.link-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
